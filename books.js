@@ -2,7 +2,7 @@ const btnAdd = document.querySelector('.submit');
 const title = document.querySelector('.title');
 const author = document.querySelector('.author');
 const bookStore = document.querySelector('.books-collection');
-const collection = [];
+const collection = JSON.parse(localStorage.getItem('form')) || [];
 /* eslint-disable no-use-before-define */
 
 btnAdd.addEventListener('click', (e) => {
@@ -14,7 +14,7 @@ btnAdd.addEventListener('click', (e) => {
       id: Date.now(),
     };
     collection.push(book);
-
+    localStorage.setItem('form', JSON.stringify(collection));
     renderBooks();
     title.value = '';
     author.value = '';
@@ -37,24 +37,19 @@ const renderBooks = () => {
     bookStore.appendChild(singleBook);
   });
 };
-
+renderBooks();
 // Use Event bubbling
 bookStore.addEventListener('click', (e) => {
   if (e.target.classList.contains('remove')) {
-    const targetid = parseInt(e.target.getAttribute('id'));
-    console.log('id', targetid);
+    const targetid = parseInt(e.target.getAttribute('id'), 10);
     removeBook(targetid);
   }
 });
 
 function removeBook(targetId) {
-  const newArr = collection.filter((item) => {
-    console.log('dhd', item.id, targetId);
-    return item.id !== targetId;
-  });
-  console.log(newArr);
+  const newArr = collection.filter((item) => item.id !== targetId);
   collection.length = 0;
   collection.push(...newArr);
+  localStorage.setItem('form', JSON.stringify(collection));
   renderBooks();
 }
-
