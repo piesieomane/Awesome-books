@@ -4,6 +4,7 @@ const author = document.querySelector('.author');
 const bookStore = document.querySelector('.books-collection');
 const collection = JSON.parse(localStorage.getItem('form')) || [];
 /* eslint-disable no-use-before-define */
+// console.log('ten');
 
 btnAdd.addEventListener('click', (e) => {
   e.preventDefault();
