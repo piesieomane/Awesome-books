@@ -34,7 +34,7 @@ h3 {
 }
 
 .class-book:nth-child(odd) {
-  background: #dddddd;
+  background: #ddd;
   padding: 1%;
 }
 
