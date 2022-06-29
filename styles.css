@@ -2,6 +2,48 @@ body {
   font-family: sans-serif;
 }
 
+header {
+  display: flex;
+  border: 2px solid black;
+  padding: 10px 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  border: 2px solid black;
+  text-align: center;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.display-none {
+  display: none;
+}
+
 h1,
 h3 {
   display: flex;
