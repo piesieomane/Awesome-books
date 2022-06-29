@@ -1,4 +1,3 @@
-const contactLink = document.querySelector('.contact-link');
 const allSection = document.querySelectorAll('.section');
 const allLinks = document.querySelector('.nav-links');
 const year = document.querySelector('.date');
