@@ -2,6 +2,52 @@ body {
   font-family: sans-serif;
 }
 
+header {
+  display: flex;
+  border: 2px solid black;
+  padding: 10px 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+footer {
+  border: 2px solid black;
+  text-align: center;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.section {
+  display: none;
+}
+
+.contact {
+  text-align: center;
+}
+
+.contact ul {
+  list-style: none;
+}
+
+.active {
+  display: block;
+}
+
 h1,
 h3 {
   display: flex;
@@ -46,7 +92,7 @@ form {
   gap: 1%;
 }
 
-input[type="text"] {
+input[type='text'] {
   margin-bottom: 10px;
   border: 3px solid #363636;
 }
@@ -56,6 +102,10 @@ input[type="text"] {
 }
 
 .submit {
-  margin-left: 25%;
   box-shadow: 2px 3px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.date {
+  display: flex;
+  justify-content: flex-end;
 }
